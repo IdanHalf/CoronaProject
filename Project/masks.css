@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "ubuntu";
+    font-style: italic;
+    font-weight: 300;
+    src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2) format("woff2");
+  }
+  body {
+    height: 50vh;
+    margin: 0;
+    background-color: #333641;
+    font-family: "ubuntu", Arial, sans-serif;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #9ca0b1;
+  }
+  
+  .wrapper {
+    text-align: center;
+  }
+  .wrapper h1 {
+    color: #fff;
+    font-size: 92px;
+    font-family: "ubuntu";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.5s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
