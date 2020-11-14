@@ -1,0 +1,41 @@
+body{
+    background-color: #348322 ;
+    background-image: url(../post1.jpg); 
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+.questionPanel{
+    color: rgb(78, 63, 43);
+    margin:auto;
+    width:850px;
+    vertical-align: center;
+    margin: auto;
+    background-color: #79B96A ;
+    border: none ;
+    border-radius : 80px ;
+    padding: 70px ;
+    height: 250px ;
+    font-size: 20pt;  
+}
+.que{
+    color: rgb(200, 255, 0);
+    font-family: "ubuntu";
+    font-family: "Josefin Sans", sans-serif;
+    font-size : 30pt;
+    font-weight: bold ;
+}
+.nxtBtn{
+    position: relative ;
+    right : 10px ;
+    float: left;
+    border-color: rgb(253, 215, 0) ;
+    font-size: 18pt ;
+    background-color: #59a049  ;
+    color: #aeebb1 ;
+    width: 80px ;
+    height: 35px ;
+}
