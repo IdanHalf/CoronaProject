@@ -11,27 +11,78 @@ function generate(index){
     document.getElementById("opt3").innerHTML = jsonData[index].option3;
     document.getElementById("opt4").innerHTML = jsonData[index].option4;
 }
+function Wrong(){
+    Swal.fire({
+        icon: 'error', // success is the opposite.
+        title: 'תשובה שגויה',
+        text: jsonData[i].answer,
+        footer: jsonData[i].info,
+        })
+}
+function Correct(){
+    Swal.fire({
+        icon: 'success',
+        title: 'תשובה נכונה!',
+        text: 'כל הכבוד',
+        footer: jsonData[i].info,
+        })
+}
+function Ending(){
+    Swal.fire({
+        title: "Your score is: ["+ currentCounter +"] out of 5",
+        showDenyButton: true,
+        confirmButtonText: `חזרה לשאלון`,
+        denyButtonText: `חזרה לעמוד הראשי`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            document.location = "quiz.html";
+        } 
+        else if (result.isDenied) {
+            document.location = "/Project/Index.html";
+        }
+      })
+}
+
 
 function checkAnswer(){
     if(document.getElementById("option1").checked && jsonData[i].option1 == jsonData[i].answer ){
         currentCounter++;
+        Correct();
     }
+    else if(document.getElementById("option1").checked && jsonData[i].option1 != jsonData[i].answer){
+        Wrong();
+    }
+
     if(document.getElementById("option2").checked && jsonData[i].option2 == jsonData[i].answer ){
         currentCounter++;
+        Correct();
     }
+    else if(document.getElementById("option2").checked && jsonData[i].option2 != jsonData[i].answer){
+        Wrong();
+    }
+
     if(document.getElementById("option3").checked && jsonData[i].option3 == jsonData[i].answer ){
         currentCounter++;
+        Correct();
     }
-    if(document.getElementById("option4").checked && jsonData[i].option4 == jsonData[i].answer ){
+    else if(document.getElementById("option3").checked && jsonData[i].option3 != jsonData[i].answer){
+        Wrong();
+    }
+
+    if(document.getElementById("option4").checked && jsonData[i].option4 == jsonData[i].answer){
         currentCounter++;
+        Correct();
     }
-    //adding i for the next question
+    else if(document.getElementById("option4").checked && jsonData[i].option4 != jsonData[i].answer){
+        Wrong();
+    }
     i++;
+    //adding i for the next question
     if(jsonData.length-1 < i){
-        document.write("<body style='background-color:#348322;'>")
-        document.write("<p style='color:#79B96A; font-size:18pt;'>Your score is: "+ currentCounter);
-        document.write("</body>")
+        Ending();
     }
     //קריאה לשאלה הבאה
     generate(i);
+    
 }
+
