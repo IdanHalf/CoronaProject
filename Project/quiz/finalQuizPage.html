@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Corona QUIZ last page</title>
+        <script src="scriptfunctions/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="scriptfunctions/sweetalert2.min.css">
+        <link rel="stylesheet" href="quiz.css">
+
+        <script>
+            function Ending(){
+                    Swal.fire({
+                        title: "Your score is: ["+ "currentCounter" +"] out of 5",
+                        showDenyButton: true,
+                        confirmButtonText: `חזרה לשאלון`,
+                        denyButtonText: `חזרה לעמוד הראשי`,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            document.location = "quiz.html";
+                        } 
+                        else if (result.isDenied) {
+                            document.location = "/Project/Index.html";
+                        }
+                    })
+                }
+        </script>
+    </head>
+    <body>
+        
+        <button type="button" onclick="Ending()">Try it</button>
+
+    </body>
+</html>

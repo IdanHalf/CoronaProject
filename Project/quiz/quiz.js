@@ -5,7 +5,8 @@ var currentCounter = 0;
 generate(0);
 //generate from json array data with index
 function generate(index){
-    document.getElementById("question").innerHTML = jsonData[index].q ;
+
+    document.getElementById("question").innerHTML = jsonData[index].q;
     document.getElementById("opt1").innerHTML = jsonData[index].option1;
     document.getElementById("opt2").innerHTML = jsonData[index].option2;
     document.getElementById("opt3").innerHTML = jsonData[index].option3;
@@ -28,21 +29,20 @@ function Correct(){
         })
 }
 function Ending(){
-    Swal.fire({
-        title: "Your score is: ["+ currentCounter +"] out of 5",
-        showDenyButton: true,
-        confirmButtonText: `חזרה לשאלון`,
-        denyButtonText: `חזרה לעמוד הראשי`,
-      }).then((result) => {
-        if (result.isConfirmed) {
-            document.location = "quiz.html";
-        } 
-        else if (result.isDenied) {
-            document.location = "/Project/Index.html";
-        }
-      })
+        Swal.fire({
+            title: "Your score is: ["+ currentCounter +"] out of 5",
+            showDenyButton: true,
+            confirmButtonText: `חזרה לשאלון`,
+            denyButtonText: `חזרה לעמוד הראשי`,
+          }).then((result) => {
+            if (result.isConfirmed) {
+                document.location = "quiz.html";
+            } 
+            else if (result.isDenied) {
+                document.location = "/Project/Index.html";
+            }
+          })
 }
-
 
 function checkAnswer(){
     if(document.getElementById("option1").checked && jsonData[i].option1 == jsonData[i].answer ){
@@ -77,12 +77,6 @@ function checkAnswer(){
         Wrong();
     }
     i++;
-    //adding i for the next question
-    if(jsonData.length-1 < i){
-        Ending();
-    }
-    //קריאה לשאלה הבאה
-    generate(i);
-    
+    generate(i);    
 }
 
