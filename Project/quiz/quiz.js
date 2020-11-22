@@ -1,6 +1,7 @@
 dir="rtl";
 var i = 0;
 var currentCounter = 0;
+var userName = document.getElementById("nameINPUT");
 //התחלה משאלה ראשונה
 generate(0);
 //generate from json array data with index
@@ -30,8 +31,10 @@ function Correct(){
 }
 function Ending(){
         Swal.fire({
-            title: "Your score is: ["+ currentCounter +"] out of 5",
+            title: localStorage.getItem("nameINPUT") + " your score out of 5 is" + "\n["+ currentCounter +"]",
             showDenyButton: true,
+            showCancelButton: true,
+            cancelButtonText: `LeaderBoard`,
             confirmButtonText: `חזרה לשאלון`,
             denyButtonText: `חזרה לעמוד הראשי`,
           }).then((result) => {
@@ -40,6 +43,9 @@ function Ending(){
             } 
             else if (result.isDenied) {
                 document.location = "/Project/Index.html";
+            }
+            else if(result.isDismissed){
+                document.location = "scoreboard.html";
             }
           })
 }
