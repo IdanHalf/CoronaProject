@@ -1,0 +1,103 @@
+body{
+    background-color: #348322 ;
+    background-image: url(../post1.jpg); 
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+.questionPanel{
+    color: rgb(78, 63, 43);
+    margin:auto;
+    width:850px;
+    vertical-align: center;
+    margin: auto;
+    background-color: #79B96A ;
+    border: none ;
+    border-radius : 80px ;
+    padding: 70px ;
+    height: 250px ;
+    font-size: 20pt;  
+}
+.que{
+    color: rgb(200, 255, 0);
+    font-family: "ubuntu";
+    font-family: "Josefin Sans", sans-serif;
+    font-size : 30pt;
+    font-weight: bold ;
+}
+.nxtBtn{
+    position: relative ;
+    right : 10px ;
+    float: left;
+    border-color: rgb(253, 215, 0) ;
+    font-size: 18pt ;
+    background-color: #59a049  ;
+    color: #aeebb1 ;
+    width: 80px ;
+    height: 35px ;
+}
+
+/* NameSubmit css below*/
+.nsbody{
+    height: 60vh;
+    display: flex;
+    justify-content: space-around; /*makes everything around space */
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.form{
+    width: 50%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;    
+}
+.form input{
+    background-color: #348322 ;
+    width: 100%;
+    height: 100%;
+    color:#505768;
+    padding-top: 20px;
+    border:none;
+    outline: none;
+}
+.form label{
+    position:absolute;
+    bottom:0px;
+    left:0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+.form label::after{
+    content:"";
+    position:absolute;
+    bottom:-1px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #166fe4;
+    transform:translateX(-100%);
+    transition: transform 0.3s ease ;
+}
+.content-name{
+    position:absolute;
+    bottom: 11px;
+    left: 0%;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #166fe4;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after{
+    transform: translateX(0%);
+}

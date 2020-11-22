@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Name submit</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body class="nsbody">
+    <form class="form" id="form" action="quiz.html" method="GET"> 
+        <div>
+            <input id="nameINPUT" name="nameINPUT" type="text" maxlength='25' autocomplete="off" required>
+            <label class="label-name" for="name">
+                <span class="content-name">Name</span>
+            </label>
+        </div>
+    </form>
+    <button form="form" class="nxtBtn" type="submit" onclick="nameSave()"> הקלק  </button>
+    <script>
+        function nameSave(){
+            var x =document.getElementById("nameINPUT").value
+            localStorage.setItem("nameINPUT", x);
+            
+        }
+    </script>
+</body>
+</html>
