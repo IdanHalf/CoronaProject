@@ -4,30 +4,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 </head>
 <body>
-    <canvas id="Third" width="800" height="250"></canvas>
+    <canvas id="Fifth" width="800" height="250"></canvas>
     <script>
         FirstVac();
 
         async function FirstVac(){
             const data = await getData();
-            const ctx = document.getElementById('Third').getContext('2d');
+            const ctx = document.getElementById('Fifth').getContext('2d');
             const mixed = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: data.xs,
                     datasets: [{
-                        label: 'אחוזי מתחסנים חיסון ראשון',
+                        label: 'בדיקות חיוביות באחוזים',
                         data: data.ys,
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',   
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                        }, {
-                            label: 'אחוזי מתחסנים חיסון שני',
-                            data: data.ys2,
-                            backgroundColor: 'rgba(54, 162, 235, 0.2)',   
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 1
-                    }]
+                        backgroundColor: 'rgba(157, 18, 5, 1)',   
+                        borderColor: 'rgba(34, 0, 255, 0.65)',
+                        borderWidth: 1,
+                        fill:false,
+                        hoverBackgroundColor:'blue'
+                        }]
                 },
                 options: {
                     scales: {
@@ -46,21 +42,18 @@
         async function getData() {
             const xs = [];
             const ys = [];
-            const ys2 = [];
-            const response = await fetch('csvFiles/VprecentAGE.csv');
+            const response = await fetch('csvFiles/VprecentPositive.csv');
             const data = await response.text();
             const table = data.split('\n').slice(2);//cut after second index because irrelevant information before.
             table.forEach(row =>{
                 const columns = row.split(',');
-                const age = columns[0];
-                xs.push(" קבוצת גיל: "+age);
+                const date = columns[0];
+                xs.push(date);
                 const first = columns[1];
                 ys.push(first);
-                const second = columns[2];
-                ys2.push(second);
-                console.log(age, first,second);
+                console.log(date, first);
             });
-            return{xs,ys,ys2};
+            return{xs,ys};
         }
         </script>
 </html>
