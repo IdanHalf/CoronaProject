@@ -8,7 +8,7 @@
     height: 50vh;
     margin: 0;
     background-image: url(../image/corona_bg1.jpg);
-    font-family: "ubuntu", Arial, sans-serif;
+    font-family: "Gill Sans", sans-serif;
     overflow-x: hidden;
     display: grid;
     place-items: center;
