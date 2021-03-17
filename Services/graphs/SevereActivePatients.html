@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="Sixth" width="800" height="250"></canvas>
+    <script>
+        FirstVac();
+
+        async function FirstVac(){
+            const data = await getData();
+        
+            const ctx = document.getElementById('Sixth').getContext('2d');
+            const mixed = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.xs,
+                    datasets: [{
+                        label: 'חולים קשים - פעילים',
+                        data: data.ys,
+                        backgroundColor: 'rgba(9, 117, 38, 0.84)',//green
+                        borderColor: 'rgba(9, 117, 38, 0.8)',
+                        borderWidth: 1,
+                        fill:false,
+                        borderWidth:0.5,
+                        hoverBackgroundColor:'purple',
+                        yAxisID: 'first-y-axis'
+                        },{
+                            label: 'חולים קשים חדשים - יומי',
+                            data: data.ys2,
+                            type:'bar',
+                            backgroundColor: 'rgba(166, 6, 6, 0.6)',//red
+                            borderColor: 'rgba(166, 6, 6, 0.1)',
+                            hoverBackgroundColor:'crimson',
+                            borderWidth: 1,
+                            yAxisID: 'second-y-axis'
+                        }]
+                },
+                options: {  
+                    scales: {
+                        yAxes: [{
+                            id: 'first-y-axis',
+                            type: 'linear'
+                    },{
+                        id: 'second-y-axis',
+                        type: 'linear',
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                        }]
+                    }
+                }
+            });
+        }
+        async function getData() {
+            const xs = [];
+            const ys = [];
+            const ys2 = [];
+            const response = await fetch('csvFiles/Severe_number_of_patients-active.csv');
+            const response2 = await fetch('csvFiles/New_Severe_Patients-new.csv');
+            const data = await response.text();
+            const data2 = await response2.text();
+            const table = data.split('\n').slice(2);//cut after second index because irrelevant information before.
+            table.forEach(row =>{
+                const columns = row.split(',');
+                const date = columns[0];
+                xs.push(date);
+                const first = columns[1];
+                ys.push(first);
+                console.log(date, first);
+            });
+            const table2 = data2.split('\n').slice(2);//cut after second index because irrelevant information before.
+            table2.forEach(row =>{
+                const columns = row.split(',');
+                const second = columns[1];
+                ys2.push(second);
+                console.log(second);
+            });
+            return{xs,ys,ys2};
+        }
+        </script>
+</html>
