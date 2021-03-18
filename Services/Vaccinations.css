@@ -1,11 +1,10 @@
-
 html {
     scroll-behavior: smooth;
   }
 body {
     height: 10vh;
     margin: 0;
-    /*background-image: url(../image/corona_bg1.jpg);*/
+    background-image: url(../image/blueWall1.jpg);
     font-family: "Gill Sans", sans-serif;
     overflow-x: hidden;
     display: grid;
@@ -35,3 +34,72 @@ pre{
     font-family: "Gill Sans", sans-serif;
     font-weight: bold;
 }
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    top:0;
+    left: 1em;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2980B9;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-height:700px;
+    overflow:scroll;
+    left: 0;
+  }
+  .dropdown-content::-webkit-scrollbar { 
+    display: none;  /* removing the scrollbar */
+}
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(212, 14, 14)}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+  /* Navbar links */
+  #navbar a {
+    float: center;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }

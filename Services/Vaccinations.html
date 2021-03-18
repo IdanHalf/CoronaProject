@@ -7,56 +7,108 @@
     <link rel="stylesheet" href="Vaccinations.css">
 </head>
 <body>
-    <div>
-    <li><a href="#1">מהו חיסון</a></li>
-    <br>
-    <li><a href="#2">איזה מין חיסונים פותחו נגד קורונה</a></li>
-    <br>
-    <li><a href="#3">ההבדלים בין החיסון של פייזר לזה של מודרנה</a></li>
-    <br>
-    <li><a href="#4">האם החיסון יכול לשנות את החומר הגנטי</a></li>
-    <br>
-    <li><a href="#5">איך החיסון הופץ כלכך מהר</a></li>
-    <br>
-    <li><a href="#6">האם החיסונים יעילים גם כשמדובר במתחסנים מבוגרים ובמי שסובלים ממחלות רקע שונות</a></li>
-    <br>
-    <li><a href="#7">כמה זמן צריך לחכות בין המנה הראשונה של החיסון למנה השנייה</a></li>
-    <br>
-    <li><a href="#8">התחסנתי בחיסון של פייזר - כעבור כמה זמן יש לי הגנה</a></li>
-    <br>
-    <li><a href="#9">קיבלתי שתי מנות חיסון. לכמה זמן יש לי הגנה</a></li>
-    <br>
-    <li><a href="#10">האם החיסון בטוח</a></li>
-    <br>
-    <li><a href="#11">תופעות הלוואי לפי המחקר של פייזר</a></li>
-    <br>
-    <li><a href="#12">מאיזה גיל אפשר להתחסן</a></li>
-    <br>
-    <li><a href="#13">את מי אסור לחסן בשלב הזה</a></li>
-    <br>
-    <li><a href="#14">האם ניתן חיסון למחלימים מקורונה</a></li>
-    <br>
-    <li><a href="#15">באילו מקרי אלרגיה יש להתייעץ עם הרופא המטפל בנוגע לחיסון</a></li>
-    <br>
-    <li><a href="#16">באילו מקרי אלרגיה מותר</a></li>
-    <br>
-    <li><a href="#17">מה בנוגע למטופלים שסובלים ממערכת חיסון מוחלשת</a></li>
-    <br>
-    <li><a href="#18">>האם מותר לקבל חיסונים אחרים יחד עם חיסון נגד קורונה</a></li>
-    <br>
-    <li><a href="#19">האם אני עלול לחלות בקורונה בעקבות החיסון</a></li>
-    <br>
-    <li><a href="#20">האם החיסון מונע הדבקה בקורונה</a></li>
-    <br>
-    <li><a href="#21">התחסנתי - האם עליי לעטות מסכה</a></li>
-    <br>
-    <li><a href="#22">האם גם מתחסנים צריכים להיכנס לבידוד</a></li>
-    <br>
-    <li><a href="#23">האם לפני קבלת החיסון כדאי לעשות בדיקה סרולוגית</a></li>
-    <br>
-    <li><a href="#24">מקור</a></li>
-    <br>
+    <div id="navbar">
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">תפריט</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#1">מהו חיסון</a>
+            
+            <a href="#2">איזה מין חיסונים פותחו נגד קורונה</a>
+            
+            <a href="#3">ההבדלים בין החיסון של פייזר לזה של מודרנה</a>
+            
+            <a href="#4">האם החיסון יכול לשנות את החומר הגנטי</a>
+            
+            <a href="#5">איך החיסון הופץ כלכך מהר</a>
+            
+            <a href="#6">האם החיסונים יעילים גם כשמדובר במתחסנים מבוגרים ובמי שסובלים ממחלות רקע שונות</a>
+            
+            <a href="#7">כמה זמן צריך לחכות בין המנה הראשונה של החיסון למנה השנייה</a>
+            
+            <a href="#8">התחסנתי בחיסון של פייזר - כעבור כמה זמן יש לי הגנה</a>
+            
+            <a href="#9">קיבלתי שתי מנות חיסון. לכמה זמן יש לי הגנה</a>
+            
+            <a href="#10">האם החיסון בטוח</a>
+            
+            <a href="#11">תופעות הלוואי לפי המחקר של פייזר</a>
+            
+            <a href="#12">מאיזה גיל אפשר להתחסן</a>
+            
+            <a href="#13">את מי אסור לחסן בשלב הזה</a>
+            
+            <a href="#14">האם ניתן חיסון למחלימים מקורונה</a>
+            
+            <a href="#15">באילו מקרי אלרגיה יש להתייעץ עם הרופא המטפל בנוגע לחיסון</a>
+            
+            <a href="#16">באילו מקרי אלרגיה מותר</a>
+            
+            <a href="#17">מה בנוגע למטופלים שסובלים ממערכת חיסון מוחלשת</a>
+            
+            <a href="#18">האם מותר לקבל חיסונים אחרים יחד עם חיסון נגד קורונה</a>
+            
+            <a href="#19">האם אני עלול לחלות בקורונה בעקבות החיסון</a>
+            
+            <a href="#20">האם החיסון מונע הדבקה בקורונה</a>
+            
+            <a href="#21">התחסנתי - האם עליי לעטות מסכה</a>
+            
+            <a href="#22">האם גם מתחסנים צריכים להיכנס לבידוד</a>
+            
+            <a href="#23">האם לפני קבלת החיסון כדאי לעשות בדיקה סרולוגית</a>
+            
+            <a href="#24">מקור</a>
+
+            <a href="#">קפיצה לתחילת העמוד</a>
+
+            <a href="/index.html">חזרה לקורונה פורטל</a>
+            
+        </div>
+    </div>
 </div>
+
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        
+        
+        // When the user scrolls the page, execute scrollSticky
+        window.onscroll = function() {scrollSticky()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function scrollSticky() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
 
     <div id="1">
         <h1>מהו חיסון?</h1>
