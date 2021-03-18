@@ -2,12 +2,12 @@
 body {
     height: 10vh;
     margin: 0;
-    background-image: url(../image/corona_bg1.jpg);
+    /*background-image: url(../image/corona_bg1.jpg);*/
     font-family: "Gill Sans", sans-serif;
     overflow-x: hidden;
     display: grid;
     place-items: right;
-    background-repeat:no-repeat;
+    background-repeat: repeat;
     background-size:cover;
     position: absolute;
     right: 15px;
@@ -22,7 +22,7 @@ h1{
   
 a {
     text-decoration: none;
-    color: #9ca0b1;
+    color: #52044e;
 }
 pre{
     font-size: 20px;
