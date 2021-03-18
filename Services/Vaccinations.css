@@ -1,4 +1,7 @@
 
+html {
+    scroll-behavior: smooth;
+  }
 body {
     height: 10vh;
     margin: 0;
