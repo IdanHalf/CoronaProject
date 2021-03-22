@@ -102,6 +102,7 @@ img{
 #header .nav-list ul li:hover a{
     color: crimson;
 }
+/*hamburger menu*/
 #header .list{
     height: 60px;
     width: 60px;
