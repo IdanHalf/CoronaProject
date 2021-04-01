@@ -4,7 +4,7 @@ html {
 body {
     height: 10vh;
     margin: 0;
-    background-image: url(../image/blueWall1.jpg);
+    background-color: rgba(240, 239, 245, 0.938);
     font-family: "Gill Sans", sans-serif;
     overflow-x: hidden;
     display: grid;
@@ -15,11 +15,15 @@ body {
     right: 15px;
     top: 80px
 }
+
 h1{
-    font-size: 45px;
+    font-size: 36px;
     position: relative;
-    right: 40px;
+    text-align: center;
+    right: 200px;
     top: 10%;
+    color: rgba(251, 255, 1, 0.966);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(228, 8, 8, 0.295), 0 0 5px rgb(0, 12, 12);
 }
   
 a {
@@ -27,10 +31,12 @@ a {
     color: #52044e;
 }
 pre{
-    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-top: 10%;
     position: relative;
-    top: 10%;
-    text-align: right;
+    white-space: pre-line;
+    margin-left: 20%;
     font-family: "Gill Sans", sans-serif;
     font-weight: bold;
 }
@@ -102,4 +108,47 @@ pre{
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
   .sticky + .content {
     padding-top: 60px;
+  }
+  
+  .CoronaPic{
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  /*buttons*/
+  .btn {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bald;
+    background: #1E90FF;
+    width: 160px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(208, 245, 0, 0.781);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+  .btn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.897);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  #button1{
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  #button2{
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  #button3{
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }

@@ -9,6 +9,30 @@ html{
     font-family: 'montserrat', sans-serif;
     scroll-behavior: smooth;
 }
+h1{
+    font-size: 38px;
+    margin-bottom: 1%; /*space*/
+}
+/* p */
+p{
+    display: block;
+    unicode-bidi: embed;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    position: relative;
+    text-align: right;
+    font-family: "Gill Sans", sans-serif,cursive;
+    font-weight: bold;
+    
+}/*
+li{
+    font-size: 16px;
+    font-family: "Gill Sans", sans-serif,cursive;
+    position: relative;
+    font-weight: bold;
+    text-align: right;
+}
+/*end of p */
 a{
     text-decoration: none;
 }
@@ -24,6 +48,46 @@ img{
     width: 100%;
     object-fit: cover;
 }
+#CoronaImg{
+    height: 40%;
+    width: 50%;
+}
+
+/*dropdown-content*/
+.dropdown-content {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 8%;
+    left: 0;
+    background-image: linear-gradient(180deg,#29323c 0%,#485563 100%); /*180deg so it starts dark colour from top*/
+    overflow-x: hidden;
+    padding-top: 20px;
+    scroll-behavior: smooth;
+  }
+/* hiding all scroll bars */
+  ::-webkit-scrollbar {
+    display: none;
+}
+/* hiding all scroll bars */
+  .dropdown-content a {
+    padding: 10px 8px 15px 1px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fcfcfcc9;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    color: crimson;
+  }
+  @media screen and (max-height: 450px) {
+    .dropdown-content {padding-top: 15px;}
+    .dropdown-content a {font-size: 13px;}
+  }
+/*end dropdown-content*/
+
 .project h1{ /* footer */
     font-size: 3rem;
     text-transform: uppercase;
@@ -38,12 +102,13 @@ img{
     left: 0;
     top: 0;
     width: 100vw;
-    height: auto;
-    
+    height: auto; 
 }
+
 #header .header{
     min-height: 8vh;
     background-color: rgba(27, 99, 167, 0.212);
+    transition: background-color 0.3s ease;
 }
 .header .nav-bar{
     display: flex;
@@ -83,6 +148,7 @@ img{
     padding: 20px;
     display: block;
 }
+
 #header .nav-list ul a::after{
     content: attr(data-after);
     position: absolute;
@@ -95,6 +161,7 @@ img{
     z-index: -1;
     transition: .3s ease letter-spacing;
 }
+
 #header .nav-list ul li:hover a::after{
     transform: translate(-50%,-50%) scale(1);
     letter-spacing: initial;
@@ -287,6 +354,7 @@ img{
     opacity: .3;
     z-index: -1;
 }
+
 /* Footer */
 #footer{
     background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
