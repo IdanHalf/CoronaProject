@@ -2,19 +2,41 @@
 <html>
     <head>
         <style>
-            iframe {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
             h3{
                 font: italic small-caps bold 16px/2 cursive;
                 text-shadow: 1px 1px 2px pink;
+                margin-top: 1%;
+            }
+            #iframesS{
+                display: block;
+                box-sizing: border-box;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            iframe{
+                
             }
         </style>
-        <body style="margin:50px;padding:0px;">
-            
-            <h3 style="text-align: center;">גרף חולים בישראל</h3>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <section id="header">
+            <div class="header container">
+              <div class="nav-bar">
+                <div class="project">
+                  <a href="#sectionID"
+                    ><h1><span>C</span>orona <span>P</span>ortal</h1>
+                  </a>
+                </div>
+                <div class="nav-list">
+                  <div class="list"><div class="bar"></div></div>
+                  <!--hamburger look like-->
+                </div>
+              </div>
+            </div>
+          </section>
+        <section id="iframesS">
+            <h3 style="text-align: center; margin-top: 5%;">גרף חולים בישראל</h3>
             <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-odUdE" src="https://datawrapper.dwcdn.net/odUdE/30/"
             scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 100% !important; height: 250px;" height="250"></iframe>
 
@@ -79,6 +101,15 @@
             <h3 style="text-align: center;">מחלימים ונפטרים לפי חודש</h3>
             <iframe title="" aria-label="Table" id="" src="graphs/DailyDeath.html" 
             scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 100% !important;" height="600"></iframe>
-        </body>
-    </head>
+        </section>
+        <section id="footer" style="margin-top: 3%;">
+            <div class="footer container">
+              <div class="project">
+                <h1><span>C</span>orona <span>P</span>ortal</h1>
+                <h2>Your complete corona portal</h2>
+              </div>
+            </div>
+        </section>
+    </body>
+
 </html>
