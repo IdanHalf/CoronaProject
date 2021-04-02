@@ -34,8 +34,8 @@ function Ending(){
         Swal.fire({
             title: localStorage.getItem("nameINPUT") + " your score out of 15 is" + "\n["+ currentCounter +"]",
             showDenyButton: true,
-            showCancelButton: true,
-            cancelButtonText: `LeaderBoard`,
+            //showCancelButton: true,
+            //cancelButtonText: `LeaderBoard`,
             confirmButtonText: `חזרה לשאלון`,
             denyButtonText: `חזרה לעמוד הראשי`,
           }).then((result) => {
@@ -45,9 +45,9 @@ function Ending(){
             else if (result.isDenied) {
                 document.location = "../../index.html";
             }
-            else if(result.isDismissed){
-                document.location = "scoreboard.html";
-            }
+            //else if(result.isDismissed){
+            //    document.location = "scoreboard.html";
+            //}
           })
         }
 }
