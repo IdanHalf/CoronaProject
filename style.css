@@ -24,7 +24,8 @@ p{
     font-family: "Gill Sans", sans-serif,cursive;
     font-weight: bold;
     
-}/*
+}
+/* if i change it, it changes the li font, need to fix by making specific class
 li{
     font-size: 16px;
     font-family: "Gill Sans", sans-serif,cursive;
@@ -32,7 +33,9 @@ li{
     font-weight: bold;
     text-align: right;
 }
+*/
 /*end of p */
+
 a{
     text-decoration: none;
 }
@@ -446,3 +449,46 @@ img{
         margin: 1%;
     }
 }
+
+/*masks page*/
+
+.wrapper {
+    text-align: center;
+  }
+  .wrapper h1 {
+    color: #fff;
+    font-size: 70px;
+    font-family: "ubuntu";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5b8fffc5 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.5s linear infinite;
+    display: inline-block;
+  }
+  /* effect of rng colors */
+  @keyframes textclip { 
+    to {
+      background-position: 200% center;
+    }
+  }
+  .wrapper2{
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+  }
+
+  pre {
+      text-align: center;
+      font-family: "Gill Sans", sans-serif;
+      overflow-x: hidden;
+      display: grid;
+      place-items: center;
+    }
