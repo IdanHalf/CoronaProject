@@ -13,7 +13,7 @@ h1{
     font-size: 38px;
     margin-bottom: 1%; /*space*/
 }
-/* p */
+/* p + li (for vaccination page)*/
 p{
     display: block;
     unicode-bidi: embed;
@@ -25,16 +25,18 @@ p{
     font-weight: bold;
     
 }
-/* if i change it, it changes the li font, need to fix by making specific class
-li{
+
+.liS li{
+    padding-top: 2%;
+    height: 40px;
     font-size: 16px;
     font-family: "Gill Sans", sans-serif,cursive;
     position: relative;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
 }
-*/
-/*end of p */
+
+/*end of p + li */
 
 a{
     text-decoration: none;
