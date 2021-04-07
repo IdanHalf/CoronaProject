@@ -75,7 +75,7 @@ img{
   ::-webkit-scrollbar {
     display: none;
 }
-/* hiding all scroll bars */
+
   .dropdown-content a {
     padding: 10px 8px 15px 1px;
     text-decoration: none;
@@ -402,7 +402,7 @@ img{
 }
 @keyframes text_reveal{
     100%{
-        color: rgb(141, 141, 141);
+        color: rgba(255, 255, 255, 0.856);
     }
 }
 @keyframes text_reveal_name{
