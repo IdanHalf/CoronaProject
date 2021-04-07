@@ -1,5 +1,4 @@
 body{
-    background-color: #3483229d ;
     background-image: url(/image/quiz_bg.jpg);
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -7,10 +6,12 @@ body{
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed;
+    margin-top: 12%;
+    margin-right: 10%;
 }
 
 .questionPanel{
-    color: rgb(100, 69, 27);
+    color: rgba(255, 255, 255, 0.808);
     margin:auto;
     width:850px;
     vertical-align: center;
@@ -18,12 +19,12 @@ body{
     background-color: #080808b7 ;
     border: none ;
     border-radius : 200px ;
-    padding: 70px ;
+    padding: 90px ;
     height: 250px ;
     font-size: 20pt;  
 }
 .que{
-    color: rgba(200, 255, 0, 0.664);
+    color: rgba(255, 38, 0, 0.664);
     font-family: "ubuntu";
     font-family: "Josefin Sans", sans-serif;
     font-size : 30pt;
