@@ -494,3 +494,9 @@ img{
       display: grid;
       place-items: center;
     }
+
+/*map declarations*/
+.mikra{
+    top: 300px;
+    height: 40px;
+}

@@ -32,7 +32,7 @@ function Correct(){
 function Ending(){
     if(i == 15){
         Swal.fire({
-            title: localStorage.getItem("nameINPUT") + " your score out of 15 is" + "\n["+ currentCounter +"]",
+            title: localStorage.getItem("nameINPUT") + "\n" + " הניקוד שקיבלת מתוך 15 השאלות" + "\n["+ currentCounter +"]",
             showDenyButton: true,
             //showCancelButton: true,
             //cancelButtonText: `LeaderBoard`,
