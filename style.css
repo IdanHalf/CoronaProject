@@ -53,7 +53,7 @@ img{
     width: 100%;
     object-fit: cover;
 }
-#CoronaImg{
+.CoronaImg{
     height: 40%;
     width: 50%;
 }
@@ -61,7 +61,7 @@ img{
 /*dropdown-content*/
 .dropdown-content {
     height: 100%;
-    width: 160px;
+    width: 200px;
     position: fixed;
     z-index: 1;
     top: 8%;
@@ -568,41 +568,6 @@ img{
     justify-content: center;
 }
 
-
-/*
-.wrapper {
-    text-align: center;
-  }
-  .wrapper h1 {
-    color: #fff;
-    font-size: 70px;
-    font-family: "ubuntu";
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: "Josefin Sans", sans-serif;
-    background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5b8fffc5 60%);
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 1.5s linear infinite;
-    display: inline-block;
-  }
-  /*effect of rng colors 
-  @keyframes textclip { 
-    to {
-      background-position: 200% center;
-    }
-  }
-  .wrapper2{
-    overflow-x: hidden;
-    display: grid;
-    place-items: center;
-  }
-*/
   pre {
       text-align: center;
       font-family: "Gill Sans", sans-serif;
