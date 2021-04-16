@@ -308,6 +308,7 @@ img{
     max-width: 500px;
     margin: 0 auto;
 }
+/* title of services with red in main site */
 #services .section-title{
     font-size: 4rem;
     font-weight: 300;
@@ -320,6 +321,7 @@ img{
 #services .section-title span{
     color: crimson;
 }
+/* end of title of services with red in main site */
 #services .service-top p{
     font-size: 1.4rem;
     margin-top: 5px;
@@ -452,8 +454,122 @@ img{
     }
 }
 
-/*masks page*/
+/*masks section*/
+#masks .section-title{
+    font-size: 7rem;
+    font-weight: 300;
+    color: black;
+    margin: 25px;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    text-align: center;
+}
+#masks .section-title span{
+    color: crimson;
+}
+#masks .masks{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#masks .masks-header h1{
+    margin-bottom: 50px;
+}
+#masks .all-masks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#masks .mask-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto; /* auto is for gaps */
+    overflow: hidden;
+    border-radius: 10px;
+}
+#masks .mask-info{
+    padding: 30px;
+    flex-basis: 50%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    color: rgba(255, 0, 0, 0.377);
+}
+#masks .mask-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#masks .mask-info h2{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#masks .mask-info p{
+    font-size: 1.7rem;
+}
+#masks .mask-info p{
+    color: white;
+}
+#masks .mask-img{
+    flex-basis: 50%;
+    overflow: hidden;
+    position: relative;
+}
+/* overlay for img */
+#masks .mask-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .65; /*give the img dark look after relative position^ */
+    pointer-events:none; /*So i can click on my images after overlay covers the image*/
+}
+#masks .mask-img img{
+    transition: .3s ease transform;
+}
+#masks .mask-item:hover .mask-img{
+    transform: scale(1.05); /* hover effect for my img */
+}
+/*reversing the row per each even number*/
+#masks .mask-item:nth-child(even){
+    flex-direction: row-reverse;
+}
 
+#masks .mask-item{
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    flex-direction: row;
+}
+#masks .all-masks .mask-info{
+    height: 100%;
+}
+#masks .all-masks .mask-img{
+    height: 100%;
+}
+.video{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
 .wrapper {
     text-align: center;
   }
@@ -475,7 +591,7 @@ img{
     animation: textclip 1.5s linear infinite;
     display: inline-block;
   }
-  /* effect of rng colors */
+  /*effect of rng colors 
   @keyframes textclip { 
     to {
       background-position: 200% center;
@@ -486,7 +602,7 @@ img{
     display: grid;
     place-items: center;
   }
-
+*/
   pre {
       text-align: center;
       font-family: "Gill Sans", sans-serif;
