@@ -1,6 +1,7 @@
 dir="rtl";
 var i = 0;
 var currentCounter = 0;
+var max = 15
 var userName = document.getElementById("nameINPUT");
 //התחלה משאלה ראשונה
 generate(0);
@@ -64,7 +65,9 @@ function checkAnswer(){
             Correct();
         }
         else if(document.getElementById("option1").checked && jsonData[i].option1 != jsonData[i].answer){
+            max--;
             Wrong();
+            imageSwitch(max);
         }
 
         if(document.getElementById("option2").checked && jsonData[i].option2 == jsonData[i].answer ){
@@ -72,7 +75,9 @@ function checkAnswer(){
             Correct();
         }
         else if(document.getElementById("option2").checked && jsonData[i].option2 != jsonData[i].answer){
+            max--;
             Wrong();
+            imageSwitch(max)
         }
 
         if(document.getElementById("option3").checked && jsonData[i].option3 == jsonData[i].answer ){
@@ -80,7 +85,9 @@ function checkAnswer(){
             Correct();
         }
         else if(document.getElementById("option3").checked && jsonData[i].option3 != jsonData[i].answer){
+            max--;
             Wrong();
+            imageSwitch(max)
         }
 
         if(document.getElementById("option4").checked && jsonData[i].option4 == jsonData[i].answer){
@@ -88,9 +95,40 @@ function checkAnswer(){
             Correct();
         }
         else if(document.getElementById("option4").checked && jsonData[i].option4 != jsonData[i].answer){
+            max--;
             Wrong();
+            imageSwitch(max)
         }
         i++;
         generate(i);    
+    }
+}
+
+function imageSwitch(){
+    console.log(max);
+    var f = max;
+    if (f <= 13 && f >= 11) {
+        var b = document.getElementById('healthbar').src = "/image/13minus.png";
+        if(f == 13){
+            alert("ירד לך חיים");
+        }
+    }
+    else if(f <= 10 && f >= 7){
+        var c = document.getElementById('healthbar').src = "/image/10minus.png";
+        if(f == 10){
+            alert("ירד לך חיים");
+        }  
+    }
+    else if(f <= 6 && f >= 4){
+        var d = document.getElementById('healthbar').src = "/image/6minus.png";
+        if(f == 6){
+            alert("ירד לך חיים");
+        }
+    }
+    else if(f <= 3 && f >= 0){
+        var e = document.getElementById('healthbar').src = "/image/3minus.png";
+        if(f == 3){
+            alert("ירד לך חיים");
+        }
     }
 }
