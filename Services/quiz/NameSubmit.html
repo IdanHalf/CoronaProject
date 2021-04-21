@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="quiz.css">
 </head>
 <body class="nsbody">
+    <!--form for the name submittion, action sends the data to quiz.html, using get method since its not sensetive information-->
     <form class="form" id="form" action="quiz.html" method="GET"> 
         <div>
-            <input id="nameINPUT" name="nameINPUT" type="text" maxlength='25' autocomplete="off" required>
+            <input id="nameINPUT" name="nameINPUT" type="text" maxlength='25' autocomplete="off" required> <!-- required filling name-->
             <label class="label-name" for="name">
                 <span class="content-name">Name</span>
             </label>
@@ -15,6 +16,8 @@
     </form>
     <button form="form" class="nxtBtn" type="submit" onclick="nameSave()"> הקלק  </button>
     <script>
+        //script that saves the name input by his id into variable x, then im setting x as nameinput into localstorage,
+        // so i can use the name after the click and page transfer from namesubmit.html to quiz.html.
         function nameSave(){
             var x =document.getElementById("nameINPUT").value
             localStorage.setItem("nameINPUT", x);

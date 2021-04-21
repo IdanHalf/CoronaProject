@@ -3,38 +3,38 @@
     <head>
         <title> Corona QUIZ</title>
         <script src="scriptfunctions/sweetalert2.min.js"></script>
-        <link rel="stylesheet" href="scriptfunctions/sweetalert2.min.css">
+        <link rel="stylesheet" href="scriptfunctions/sweetalert2.min.css"> <!--library of sweetalert for nice effects-->
         <link rel="stylesheet" href="quiz.css">
     </head>
     
 
     <body>
-        <div class="questionPanel">
-            <div class="que" id="question">
+        <div class="questionPanel"> <!-- this is the question pannel, questions will be display as radio (that u need to press on circles)
+                                        -->
+            <div class="que" id="question"> <!--this is the title-->
             </div>
-            <div> <input type="radio" id="option1" name="options">
+            <div> <input type="radio" id="option1" name="options"> <!--this is option 1-->
                 <span id="opt1"></span>
             </div>
 
-            <div> <input type="radio" id="option2" name="options">
+            <div> <input type="radio" id="option2" name="options"> <!--this is option 2-->
                 <span id="opt2"></span>
             </div>
 
-            <div> <input type="radio" id="option3" name="options">
+            <div> <input type="radio" id="option3" name="options"> <!--this is option 3-->
                 <span id="opt3"></span>
             </div>
 
-            <div> <input type="radio" id="option4" name="options">
+            <div> <input type="radio" id="option4" name="options"> <!--this is option 4-->
                 <span id="opt4"></span>
             </div>
-            <button class="nxtBtn" onclick="Ending()">סיום</button>
-            <button class="nxtBtn" onclick="checkAnswer()">המשך</button>
+            <button class="nxtBtn" onclick="Ending()">סיום</button> <!--functions are at quiz.js page-->
+            <button class="nxtBtn" onclick="checkAnswer()">המשך</button> 
         </div>
         <div>
-            <img src="/image/15.png" id="healthbar">
-            
+            <img src="/image/15.png" id="healthbar">  <!-- default picture of full health bar, will change by answering wrong questions-->
         </div>
-        <script src="data.js"></script>
+        <script src="data.js"></script> <!--contains questions and answers as structers that look like json file in javascript-->
         <script src="quiz.js"></script>
     </body>
 </html>

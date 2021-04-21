@@ -1,15 +1,17 @@
+
 body{
     background-image: url(/image/quiz_bg.jpg);
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-    background-position: center !important;
+    background-position: center !important; /* !important is to override ALL previous styling rules for that specific property on that element */
     background-repeat: no-repeat !important;
     background-attachment: fixed;
-    margin-top: 12%;
+    margin-top: 12%; /* making content in center with margin top and right */
     margin-right: 10%;
+    /* making background cover and on center */
 }
-
+/* styling the questions */
 .questionPanel{
     color: rgba(255, 255, 255, 0.808);
     margin:auto;
@@ -18,11 +20,12 @@ body{
     margin: auto;
     background-color: #080808b7 ;
     border: none ;
-    border-radius : 200px ;
-    padding: 90px ;
+    border-radius : 200px ; /* "circly" radius */
+    padding: 90px ; /* sizing it with padding and height */
     height: 250px ;
     font-size: 20pt;  
 }
+/* styling the title's questions */
 .que{
     color: rgba(255, 38, 0, 0.664);
     font-family: "ubuntu";
@@ -30,6 +33,7 @@ body{
     font-size : 30pt;
     font-weight: bold ;
 }
+/* styling the button */
 .nxtBtn{
     position: relative ;
     right : 10px ;
@@ -44,70 +48,73 @@ body{
 
 /* NameSubmit css below*/
 .nsbody{
-    height: 60vh;
-    display: flex;
+    height: 60vh; /* height of the form(name submit) to be around the middle  */
+    display: flex; /* flexible items be the same length, regardless of its content */
     justify-content: space-around; /*makes everything around space */
-    align-items: center;
-    flex-direction: column;
+    align-items: center; /* centering my name submit */
+    flex-direction: column; /* displayed vertically, as a column */
     font-family: sans-serif;
 }
 .form{
-    width: 50%;
-    height: 50px;
-    position: relative;
-    overflow: hidden;    
+    width: 50%; /* width of the fill name bar */
+    height: 50px; /* name bar's height like above*/
+    position: relative; /* added so i can adjust sizes of the input */
+    overflow: hidden; /*hiding the blue effect that enters after clicking and replacing the red*/ 
 }
 .form input{
-    background-image: url(/image/quiz_bg.jpg);
-    background-color: #06b8e4 ;
-    width: 100%;
-    height: 100%;
-    color:#685050;
-    padding-top: 20px;
-    border:none;
-    outline: none;
+    background-image: url(/image/quiz_bg.jpg); /* input has same image as the quiz background */
+    width: 100%; /* making the input the size of the form with width and height of 100% */
+    height: 100%; 
+    color:#685050; /* color of the text writing */
+    padding-top: 20px; /*input starts 20px down */
+    border:none; /* removing the borders of the form */
+    outline: none; /* no line under the text box */
 }
 .form label{
     position:absolute;
-    bottom:0px;
+    bottom:0px; /* always gonna be at bottom */
     left:0%;
-    width: 100%;
+    width: 100%; /* width and height of the form aswell */
     height: 100%;
-    pointer-events: none;
-    border-bottom: 1px solid rgb(252, 0, 0);
+    pointer-events: none; /* click through the picture */
+    border-bottom: 1px solid rgb(252, 0, 0); /* the red line that i made instead of border */
 }
+/* adding after effect, after label i add styles */
 .form label::after{
-    content:"";
-    position:absolute;
+    content:""; /*none 'cause i dont want additional content, but only styles */
+    position:absolute; /* same position as label */
     bottom:-1px;
-    left:0px;
+    left:0px; /* position on top of the red line with left 0px and bottom -1px */
     width: 100%;
-    height: 100%;
-    border-bottom: 3px solid #166fe4;
-    transform:translateX(-100%);
-    transition: transform 0.3s ease ;
+    height: 100%; /* same size as label width and height */
+    border-bottom: 3px solid #166fe4; /* blue line that will replace the red */
+    transform:translateX(-100%); /*moving the blue line to the left side (will hide with overflow hidden as mentioned above) */
+    transition: transform 0.3s ease ; /* smooth transition */ 
 }
+/* placing "Name" where i want it to be */
 .content-name{
     position:absolute;
     bottom: 11px;
     left: 0%;
     transition: all 0.3s ease;
 }
+/*everytime i focus/click on input i want Name(label) to go up*/
 .form input:focus + .label-name .content-name,
-.form input:valid + .label-name .content-name{
+.form input:valid + .label-name .content-name{ /*when its valid as text, it will work, otherwise it won't */
     transform: translateY(-150%);
     font-size: 14px;
-    color: #166fe4;
+    color: #166fe4; /*changing the color of the Name aswell to blue, like the line*/
 }
-
+/* moving the blue line in, when form is valid again */
 .form input:focus + .label-name::after,
 .form input:valid + .label-name::after{
     transform: translateX(0%);
 }
 
 .content-name{
-    color: crimson;
+    color: crimson; /* Name is crimson(red) */
 }
+/* positioning healthbar, and opacity of 0.7 to make it look less strong */
 #healthbar{
     margin-top: -10%;
     margin-right: 40%;

@@ -2,11 +2,15 @@
 <html>
     <head>
         <style>
+          /* margin top is to add some space */
             h3{
                 font: italic small-caps bold 16px/2 cursive;
                 text-shadow: 1px 1px 2px pink;
                 margin-top: 1%;
             }
+            /*iframes will display as block, 
+            border box means Width and height apply to all parts of the element: content, padding and borders 
+            the left and right auto is to center it automatically whithin the box*/
             #iframesS{
                 display: block;
                 box-sizing: border-box;
@@ -18,6 +22,7 @@
         <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
+      <!--same header section as main-->
         <section id="header">
             <div class="header container">
               <div class="nav-bar">
@@ -28,11 +33,14 @@
                 </div>
                 <div class="nav-list">
                   <div class="list"><div class="bar"></div></div>
-                  <!--hamburger look like-->
                 </div>
               </div>
             </div>
           </section>
+
+          <!-- all the section is align to center, every iframe scrolling is disabled, frameborder is none, and specific height and width
+            !important is to override ALL previous styling rules for that specific property on that element
+          -->
         <section id="iframesS" align="center">
             <h3 style="text-align: center; margin-top: 5%;">גרף חולים בישראל</h3>
             <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-odUdE" src="https://datawrapper.dwcdn.net/odUdE/30/"
@@ -100,6 +108,7 @@
             <iframe title="" aria-label="Table" id="" src="graphs/DailyDeath.html" 
             scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
         </section>
+        <!--same footer section as main-->
         <section id="footer" style="margin-top: 3%;"> <!--margin top to have tiny space between footer and last graph-->
             <div class="footer container">
               <div class="project">
@@ -108,7 +117,7 @@
               </div>
             </div>
         </section>
-        <script src="/IndexHamburger.js"></script> <!-- for header effect aswell-->
+        <script src="/IndexHamburger.js"></script> <!-- for header effect aswell even tho hamburger doesnt apply here-->
     </body>
 
 </html>

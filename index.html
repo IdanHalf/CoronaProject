@@ -12,6 +12,7 @@
       <div class="header container">
         <div class="nav-bar">
           <div class="project">
+            <!-- span is for red color-->
             <a href="#sectionID"
               ><h1><span>C</span>orona <span>P</span>ortal</h1>
             </a>
@@ -20,6 +21,8 @@
             <div class="list"><div class="bar"></div></div>
             <!--hamburger look like-->
             <ul>
+              <!-- href so the menu is clickable and will move us to the correct section-->
+              <!-- data-after is for the hamburger menu on mobile -->
               <li>
                 <a href="#sectionID" data-after="Home">Home</a>
               </li>
@@ -48,6 +51,7 @@
     <section id="services">
       <div class="services container">
         <div class="service-top">
+          <!-- span is for the color red to the letter i-->
           <h1 class="section-title">Serv<span>i</span>ces</h1>
           <h3 style="font-size:large">
             פה אתם יכולים לראות את האזור שלכם במפה לבדוק את צבע אזורכם (אדום
@@ -57,6 +61,7 @@
         <div class="service-bottom">
           <div class="service-item">
             <div class="icon"><img src="./image/iconMap1.png" /></div>
+            <!-- horizontal class make the effect of filling the box with the color while hovering in horizontal way-->
             <div>
               <a href="Services/Map.html" target="blank" class="horizontal"
                 ><span class="text">מפה</span></a
@@ -124,6 +129,7 @@
       </div>
     </section>
 
+    <!-- adding script page for hamburger menu and header from transparent onscroll eventlistener will make it not transparent-->
     <script src="IndexHamburger.js"></script>
   </body>
 </html>
