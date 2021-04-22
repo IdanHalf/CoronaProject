@@ -8,7 +8,7 @@
     <title>vaccination page check</title>
     <style>
         p{
-            margin-bottom: 1em;
+            margin-bottom: 1em; /* for space */
         }
         summary{
             padding: 2rem;
@@ -49,7 +49,6 @@
             </div>
             <div class="nav-list">
               <div class="list"><div class="bar"></div></div>
-              <!--hamburger look like-->
               <ul>
                 <li>
                     <a href="/index.html" data-after="Home">Home</a>
@@ -58,6 +57,8 @@
                     <a href="/index.html#services" data-after="Service">Service</a>
                 </li>
                 <li>
+                    <!--    Added a menu button that uses class of dropdown which has list with direct link into the titles of the questinos,
+                            fires HitFunc function onclick-->
                     <a href="#dropdown" onclick="HitFunc();" data-after="DropMenu">Menu</a>
                 </li>
               </ul>
@@ -70,6 +71,7 @@
         <nav id="navbar">
             <div class="dropdown" >
                 <div id="myDropdown" class="dropdown-content" dir="rtl">
+                    <!--list with clickable titles directed to their location-->
                     <ul>
                         <li><a href="#0">מהו חיסון</a></li>
 
@@ -137,6 +139,7 @@
             <img src="https://d15djgxczo4v72.cloudfront.net/s3fs-public/davidson_images/vaccine_580_2.jpg" class="CoronaImg">
 
             <div style="padding: 2%;" id="0"></div> <!-- cant reach #1 in normal way because of header, so semi fix-->
+            <!-- details tags for summary which act like title and img+p tags inside details-->
             <details>
             <summary id="1">מהו חיסון?</summary>
             <img src="/image/whatsAvacc.jpg" class="CoronaImg">
@@ -459,8 +462,13 @@
           </div>
         </div>
       </section>
+      <!-- calling script for header effect-->
       <script src="/IndexHamburger.js"></script>
       <script>
+            /*  the menu onclick fires this function, getting access with getElementById of the dropmenu,
+                when the menu is not displayed, it will display it as a block, otherwise it will not,
+                so when i click it, it will be a block, and without clicking on it, the menu will be hidden as the display is none
+            */
           function HitFunc(){
             var x = document.getElementById("DropMenu");
             if (x.style.display === "none") {
