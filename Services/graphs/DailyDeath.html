@@ -58,7 +58,7 @@
             const ys = [];
             const ys2 = [];
             const response = await fetch('csvFiles/DeathDaily.csv'); //1 month only (can change it if needed)
-            const response2 = await fetch('csvFiles/RecoveringDaily.csv'); //1 month only (can change it if needed)
+            const response2 = await fetch('csvFiles/RecoveringDaily.csv'); // 1 month only, to change, only need to download more dates files
             const data = await response.text();
             const data2 = await response2.text();
             const table = data.split('\n').slice(2);//cut after second index because irrelevant information before.

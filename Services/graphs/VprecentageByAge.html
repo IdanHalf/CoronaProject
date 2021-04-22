@@ -35,7 +35,8 @@
                             ticks: {
                                 beginAtZero: true,
                                 callback: function(value, index, values) {
-                                    return  value + '%';
+                                    return  value + '%';    // inorder to have % in the default yaxes, i need to return value + the % sign
+                                                            //its the only way to do that while using chart.js from what i searched.
                                 }
                             }
                         }]
@@ -43,6 +44,7 @@
                 }
             });
         }
+        /* almost the same function but here,  */
         async function getData() {
             const xs = [];
             const ys = [];
@@ -53,7 +55,7 @@
             table.forEach(row =>{
                 const columns = row.split(',');
                 const age = columns[0];
-                xs.push(" קבוצת גיל: "+age);
+                xs.push(" קבוצת גיל: "+age); // using string to display what kind of information is it (since it is not date which is obvious)
                 const first = columns[1];
                 ys.push(first);
                 const second = columns[2];

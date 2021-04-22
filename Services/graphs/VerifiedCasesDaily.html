@@ -18,13 +18,13 @@
                     datasets: [{
                             label: 'ממוצע נע',
                             data: data.ys2,
-                            type: 'line',
+                            type: 'line', // mixed type, using lines instead of the default type i made up as bar
                             fill:false,
                             borderWidth:0.1,
                             backgroundColor: 'rgba(2, 2, 27, 0.7)',   
                             borderColor: 'rgba(24, 229, 27, 1)',
                             borderWidth: 1,
-                            yAxisID: 'first-y-axis'
+                            yAxisID: 'first-y-axis' // making an yAxis id, so i can display more than 2 datas in a single graph 
                     },
                         {
                         label: 'מאומתים',
@@ -35,8 +35,8 @@
                     },{
                         label:'ממוצע מצטבר',
                         data:data.ys3,
-                        yAxisID: 'second-y-axis',
-                        type:'line',
+                        yAxisID: 'second-y-axis', // making an yAxis id, so i can display more than 2 datas in a single graph 
+                        type:'line', // mixed type, using lines instead of the default type i made up as bar
                         fill:false,
                         backgroundColor: 'rgba(217, 214, 219,1)',   
                         borderColor: 'rgba(235, 74, 137, 0.3)',
@@ -46,7 +46,7 @@
                 },
                 options: {  
                     scales: {
-                        yAxes: [{
+                        yAxes: [{ // inorder to make more than 2 things on the Y graph, i need to make new id for two of my datas
                             id: 'first-y-axis',
                             type: 'linear'
                     },{

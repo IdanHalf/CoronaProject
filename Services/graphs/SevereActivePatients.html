@@ -40,7 +40,7 @@
                 options: {  
                     scales: {
                         yAxes: [{
-                            id: 'first-y-axis',
+                            id: 'first-y-axis', // again making this id to have 2 seperated yAxes
                             type: 'linear'
                     },{
                         id: 'second-y-axis',
@@ -54,6 +54,8 @@
                 }
             });
         }
+        /*  almost same as before, but now i added another table so i can get 2 csv files in one function 
+            inorder to have 2 seperate csv files combined in my graph */
         async function getData() {
             const xs = [];
             const ys = [];

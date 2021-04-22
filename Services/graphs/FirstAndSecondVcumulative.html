@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- using the library of chart.js-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 </head>
 <body>
@@ -9,21 +10,21 @@
         FirstVac();
 
         async function FirstVac(){
-            const data = await getData();
+            const data = await getData(); // because of async, it will wait for getdata to be done before it does anything else.
             const ctx = document.getElementById('First').getContext('2d');
             const mixed = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: data.xs,
                     datasets: [{
-                        label: 'חיסון ראשון מצטבר',
-                        data: data.ys,
+                        label: 'חיסון ראשון מצטבר', // the label that is displayed above //
+                        data: data.ys, // using the first cumulative vaccination data here
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',   
                         borderColor: 'rgba(255, 99, 132, 1)',
                         borderWidth: 1
                         }, {
                             label: 'חיסון שני מצטבר',
-                            data: data.ys2,
+                            data: data.ys2, // using the second cumulative vaccination data here
                             backgroundColor: 'rgba(54, 162, 235, 0.2)',   
                             borderColor: 'rgba(54, 162, 235, 1)',
                             borderWidth: 1
@@ -40,13 +41,26 @@
                 }
             });
         }
+        /*  fetching the data into const response from csv file with await inorder to parse information, 
+            and so until it finishes reading it won't continue before
+            i want to recieve the data into text so i do response.text() (its function of response)
+            the i parse the text by new line with .split \n and then i slice the file from index 2, 
+            because i have no use for the information before that
+            and then i put it into const table.
+            using foreach inorder to split the data in each row by ',' then, i put it into const columns
+            columns index 0 will be the date, and so i restore it in const date, and push it into const xs
+            columns index 1 is the first cumulative vaccination which i push it into const ys
+            columns index 2 is second cumulative vaccination and i push it into const ys2
+            then after going through all the rows, i return the arrays of xs ys and ys2 to the function firstVac that calls it
+            and then use the data there for the graphs
+         */
         async function getData() {
             const xs = [];
             const ys = [];
             const ys2 = [];
             const response = await fetch('csvFiles/cumulative_v.csv');
             const data = await response.text();
-            const table = data.split('\n').slice(2);//cut after second index because irrelevant information before.
+            const table = data.split('\n').slice(2);//cut after second index because irrelevant information before that in the csv file.
             table.forEach(row =>{
                 const columns = row.split(',');
                 const date = columns[0];
