@@ -121,26 +121,14 @@ function imageSwitch(){
     var f = max;
     if (f <= 13 && f >= 11) {
         var b = document.getElementById('healthbar').src = "/image/13minus.png";
-        if(f == 13){
-            alert("ירד לך חיים");
-        }
     }
     else if(f <= 10 && f >= 7){
         var c = document.getElementById('healthbar').src = "/image/10minus.png";
-        if(f == 10){
-            alert("ירד לך חיים");
-        }  
     }
     else if(f <= 6 && f >= 4){
         var d = document.getElementById('healthbar').src = "/image/6minus.png";
-        if(f == 6){
-            alert("ירד לך חיים");
-        }
     }
     else if(f <= 3 && f >= 0){
         var e = document.getElementById('healthbar').src = "/image/3minus.png";
-        if(f == 3){
-            alert("ירד לך חיים");
-        }
     }
 }
