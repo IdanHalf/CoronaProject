@@ -1,40 +1,138 @@
 <!DOCTYPE html>
-<html dir="rtl">
-    
-    <head>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
-            a{
-                text-decoration:none;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>History epidemic page</title>
+    <style>
+        p{
+            margin-bottom: 1em; /* for space */
+            margin-top: 1em;
+        }
+        summary{
+            padding: 2rem;
+            background-color: rgba(27, 99, 167, 0.212);
+            margin-bottom: 1em;
+            cursor: pointer;
+            outline: none;
+            border-radius: .3em;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color .3s;
+        }
+
+        /* smooth effect on opening summary */
+        details[open] summary ~ * {
+            animation: sweep .5s ease-in-out;
+        }
+        @keyframes sweep{
+            from{
+                opacity: 0;
+                transform: translateY(-10px)
             }
-            body {
-                background-size: cover;
-                background-position: top center;
-                position: relative;
-                background-image: url(/image/corona_bg1.jpg);
-                }
-            pre{
-                font-family: 'Langar', cursive;
+            to{
+                opacity: 1;
+                transform: translateY(0px)
             }
-        </style>
-            <link rel="stylesheet" href="btn-style.css">
-        <body>
-            <h1 style="font-size: 300%; color: rgb(0, 0, 0); text-shadow: 5px 5px 10px #133013">
-                <pre>
-                    
-                    שלום, אנו זקוקים לך כדי לבלום את התפשטות הקורונה.
-                    מילוי יום-יומי של השאלון כאן:
-                    <a href="https://survey-corona-cloud.clalit.co.il/pq-web/dr?uid=70f2abd3-4dd2-47e2-bc22-61323aa55598" target="_blank">קישור לשאלון</a>                
-                    
-                    יעזור לנו לזיהוי מוקדם של מוקדי התפרצות. השאלון אישי ואינו ניתן להעברה.
-                    במידה ועל פי תשובתך, בשילוב המידע מהתיק האישי שלך,
-                    יעלה כי עליך לבצע בדיקת קורונה, יתכן וניצור איתך קשר.
-                    
-                    יחד נשמור על בריאותנו ובריאות היקרים לנו וננצח את הקורונה. כללית.
-                    להסרה:
-                    <a href="https://r.clalit.co.il/eppl2lw" target="_blank">קישור להסרה</a>
-                </pre>
-            </h1>
-        </body>
-    </head>
+        }
+    </style>
+</head>
+<body>
+    <section id="header" dir="ltr">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="project">
+                    <a href="/index.html"
+                    ><h1><span>C</span>orona <span>P</span>ortal</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <section id="services">
+        <div class="services container1" dir="rtl">
+          
+            <section class="video" style="padding: 4rem;">
+                <div class="Vid">
+                    <video controls muted> <!-- let the user have controls like play pause in the video, and muted means it starts muted, can be unmute in control -->
+                        <source src="/image/10 of the Worst Epidemics and Pandemics in History.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+
+            
+            <!-- details tags for summary which act like title and img+p tags inside details-->
+            <details>
+            <summary>מכת אנטונין: 165-180 אחריי הספירה</summary>
+            <img src="/image/plagues/antonine_plague.png" class="CoronaImg">
+                <p>
+                    כשחיילים חזרו לאימפריה הרומית ממסע, הם החזירו יותר משלל הניצחון.<br>
+                    מגפת אנטונין, שאולי הייתה אבעבועות שחורות, שיבדה את הצבא ואולי הרגה למעלה מחמישה מיליון בני אדם באימפריה הרומית,
+                    כתב אפריל פודסי, מרצה בכיר להיסטוריה של רומא באוניברסיטת מטרופוליטן במנצ'סטר, במאמר שפורסם בספר. "נכות בעת העתיקה", Routledge, 2017).<br>
+                    היסטוריונים רבים מאמינים כי המגיפה הובאה לראשונה לאימפריה הרומית על ידי חיילים שחזרו הביתה לאחר מלחמה נגד פרתיה.<br>
+                    המגיפה תרמה לסיום ה- Pax Romana (השלום הרומי), תקופה משנת 27 לפני הספירה.<br>
+                    לשנת 180 לספירה, כשרומא הייתה בשיא כוחה.<br>
+                    לאחר שנת 180 לספירה גברה חוסר היציבות ברחבי האימפריה הרומית, מכיוון שחוותה יותר מלחמות אזרחים ופלישות מצד קבוצות "ברבריות".
+                </p>
+            </details>
+
+            <details>
+                    <summary>המוות השחור</summary>
+                    <img src="/image/plagues/black death.jpg" class="CoronaImg">
+                    <p>
+                        הדבר שב והיכה באירופה גם במאה ה-14, והפעם באופן קטלני הרבה יותר.<br>
+                        המוות השחור נסע מאסיה לאירופה והותיר אחריו חורבן. <br>
+                        ההערכות הן שהמגפה – שכונתה המוות השחור, הובילה למותם של בין 75 ל-200 מיליון בני אדם, כ-60% מאוכלוסיית אירופה בין השנים 1346 ל-1353.<br>
+                        זה נגרם על ידי זן של החיידק Yersinia pestis שככל הנראה נכחד היום והופץ על ידי פרעושים על מכרסמים נגועים. גופות הקורבנות נקברו בקברי אחים.<br>
+                        קשה להפריז בהשפעת המגפה הנוראית על אוכלוסיית אירופה.<br>
+                        עם כל כך הרבה הרוגים, קשה היה למצוא עבודה, מה שהביא לשכר טוב יותר לעובדים ולסיום מערכת הצמיתות של אירופה.<br>
+                        האומנות, הכלכלה ואפילו הסדר החברתי באירופה, כולם השתנו בעקבות זוועות המגפה – שהובילה למותם של אצילים רבים, לחיזוקם של האיכרים וקריסת הסדר הפיאודלי.<br>
+                        מחקרים מצביעים על כך שלעובדים ששרדו הייתה גישה טובה יותר לבשר ולחם איכותי יותר.<br>
+                        היעדר כוח אדם זול אולי תרם גם לחדשנות טכנולוגית.<br>
+                        גם היהודים באירופה סבלו מהמגפה, אך לא רק בגלל החיידק.<br>
+                        רבים מתושבי אירופה ראו בקהילות היהודיות כאשמות במחלה הקשה, והחלו ברדיפתם של היהודים וכליאתם בגטאות.
+                    </p>
+            </details>
+
+            <details>
+                <summary>American Plagues: 16th century</summary>
+                <img src="/image/plagues/americanPleagues.jpg" class="CoronaImg">
+                <p>
+                    המגפות האמריקאיות הן מקבץ של מחלות אירואסיות שהובאו לאמריקה על ידי חוקרים אירופאים.<br>
+                    מחלות אלה, כולל אבעבועות שחורות, תרמו לקריסת התרבויות האינקה והאצטקים.<br>
+                    יש אומדנים המראים כי 90% מהאוכלוסייה הילידית בחצי הכדור המערבי נהרגה.<br>
+                    המחלות סייעו לכוח ספרדי בראשות הרנן קורטס לכבוש את בירת האצטקים טנוצ'יטילן בשנת 1519 וכוח ספרדי נוסף שהובל על ידי פרנסיסקו פיזארו לכבוש את האינקה בשנת 1532.<br>
+                    הספרדים השתלטו על שטחי שתי האימפריות.<br>
+                    בשני המקרים צבאות האצטקים והאינקה הושמדו ממחלות ולא הצליחו לעמוד בפני הכוחות הספרדים.<br>
+                    כאשר אזרחי בריטניה, צרפת, פורטוגל והולנד החלו לחקור, לכבוש וליישב את חצי הכדור המערבי,
+                    הם נעזרו גם בעובדה שמחלה צמצמה במידה ניכרת את גודלן של כל קבוצות הילידים שהתנגדו להן.
+                </p>
+            </details>
+            
+            <details>
+            <summary></summary>
+            <p>
+
+            </p>
+            </details>
+               
+        </div>
+      </section>
+      
+      
+      <section id="footer">
+        <div class="footer container">
+          <div class="project">
+            <h1><span>C</span>orona <span>P</span>ortal</h1>
+            <h2>Your complete corona portal</h2>
+          </div>
+        </div>
+      </section>
+      <!-- calling script for header effect-->
+      <script src="/IndexHamburger.js"></script>
+</body>
 </html>

@@ -38,8 +38,33 @@
           <!-- all the section is align to center, every iframe scrolling is disabled, frameborder is none, and specific height and width
             !important is to override ALL previous styling rules for that specific property on that element
           -->
+          <div style="margin-top: 5%;"></div> <!--this div's purpose it so the graph starts under the header-->
         <section id="iframesS" align="center">
-            <h3 style="text-align: center; margin-top: 5%;">גרף חולים בישראל</h3>
+            <iframe title="" aria-label="Table" id="" src="graphs/DailyFirstAndSecondV.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+
+            <iframe title="" aria-label="Table" id="" src="graphs/FirstAndSecondVcumulative.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+
+            <iframe title="" aria-label="Table" id="" src="graphs/VprecentageByAge.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+
+            <iframe title="" aria-label="Table" id="" src="graphs/VerifiedCasesDaily.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+            <!--ממוצע נע =
+              אם השער נמצא מעל הממוצע הנע – השער נמצאת במגמת עליה, ואם השער מתחת לממוצע הנע – השער נמצאת במגמת ירידה.-->
+
+            <iframe title="" aria-label="Table" id="" src="graphs/PositiveVprecentage.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+
+            <iframe title="" aria-label="Table" id="" src="graphs/SevereActivePatients.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+
+            <h3 style="text-align: center;">מחלימים ונפטרים לפי חודש</h3>
+            <iframe title="" aria-label="Table" id="" src="graphs/DailyDeath.html" 
+            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
+          
+            <h3 style="text-align: center;">גרף חולים בישראל</h3>
             <iframe title="" aria-label="Interactive line chart" id="datawrapper-chart-odUdE" src="https://datawrapper.dwcdn.net/odUdE/30/"
             scrolling="no" frameborder="0" style="width: 0px; text-align: center; border: none; min-width: 85% !important; height: 250px;" height="250"></iframe>
 
@@ -82,28 +107,6 @@
             <h3 style="text-align: center;">עשר המדינות המובילות במספר הנדבקים</h3>
             <iframe title="" aria-label="Table" id="datawrapper-chart-Xu28x" src="https://datawrapper.dwcdn.net/Xu28x/1/" 
             scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="490"></iframe>
-
-            <iframe title="" aria-label="Table" id="" src="graphs/DailyFirstAndSecondV.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
-
-            <iframe title="" aria-label="Table" id="" src="graphs/FirstAndSecondVcumulative.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
-
-            <iframe title="" aria-label="Table" id="" src="graphs/VprecentageByAge.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
-
-            <iframe title="" aria-label="Table" id="" src="graphs/VerifiedCasesDaily.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
-
-            <iframe title="" aria-label="Table" id="" src="graphs/PositiveVprecentage.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
-
-            <iframe title="" aria-label="Table" id="" src="graphs/SevereActivePatients.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
-
-            <h3 style="text-align: center;">מחלימים ונפטרים לפי חודש</h3>
-            <iframe title="" aria-label="Table" id="" src="graphs/DailyDeath.html" 
-            scrolling="no" frameborder="0" style="width: 0px; border: none; min-width: 85% !important;" height="600"></iframe>
         </section>
         <!--same footer section as main-->
         <section id="footer" style="margin-top: 3%;"> <!--margin top to have tiny space between footer and last graph-->
