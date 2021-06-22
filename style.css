@@ -202,7 +202,7 @@ img{
     background-color: white;
     z-index: -1;
 }
-
+/*the look of burger with 3 lines*/
 #header .list .bar::after,
 #header .list .bar::before{
     content: '';
@@ -265,7 +265,7 @@ img{
     padding: 0 50px;
     justify-content: flex-start;
 }
-/* begging of the page picture ending */
+/* ending of the page picture ending */
 
 /* h1 of the begging page with special animation */
 #sectionID h1{
@@ -337,6 +337,7 @@ img{
     color: crimson;
 }
 /* end of title of services with red in main site */
+/* start of services */
 #services .service-top p{
     font-size: 1.4rem;
     margin-top: 5px;
