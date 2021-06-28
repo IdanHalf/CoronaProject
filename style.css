@@ -527,12 +527,15 @@ img{
 #masks .mask-info h1{
     font-size: 4rem;
     font-weight: 500;
+    color: rgba(255, 0, 0, 0.377);
+    text-shadow: 2px 2px 4px #000000;
 }
 #masks .mask-info h2{
     font-size: 3rem;
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000000;
 }
 #masks .mask-info p{
     font-size: 1.7rem;
