@@ -1,8 +1,8 @@
 
 /* using this style for the services buttons on index page, giving them nice horizontal effect*/
 :root {
-    --base-color: rgba(0, 81, 255, 0.445);
-    --hover-color: rgba(30, 5, 255, 0.274);
+    --base-color: rgba(1, 39, 121, 0.623);
+    --hover-color: rgba(240, 155, 144, 0.829);
   }
 
   .service-item {
